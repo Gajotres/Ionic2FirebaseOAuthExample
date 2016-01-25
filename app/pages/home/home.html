@@ -1,0 +1,35 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Firebase OAuth Example
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home" padding>
+  <button [hidden]="isLoggedIn"  (click)="authWithTwitter()" full>Sign in with Twitter</button>
+  <ion-card [hidden]="!isLoggedIn">
+    <ion-card-header>
+      <h1 style="text-align: center;"><strong>{{authDataProfileName}}</strong></h1>
+    </ion-card-header>
+    <img src="{{authDataProfileImage}}" style="width: 300px; margin: 0 auto;"/>
+    <ion-card-content>
+      <p>
+        {{authDataProfileDescription}}
+      </p><br/>
+      <p>
+        <strong>Member since:</strong> {{authDataProfileMemberSince}}
+      </p>
+      <p>
+        <strong>Number of followers:</strong> {{authDataProfileNoFollowers}}
+      </p>
+      <p>
+        <strong>Location:</strong> {{authDataProfileLocation}}
+      </p>                     
+    </ion-card-content>
+    <ion-item>
+      <button primary clear danger item-right (click)="unauthWithTwitter()">
+        <icon ionic></icon>
+        <div><strong>Logout</strong></div>
+      </button>
+    </ion-item>    
+  </ion-card>  
+</ion-content>
