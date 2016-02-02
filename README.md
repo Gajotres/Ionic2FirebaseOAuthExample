@@ -2,7 +2,7 @@
 
 Follow these instruction to deploy this example:
 
-1. git clone https://github.com/Gajotres/Ionic2InternationalizationExample.git
+1. git clone https://github.com/Gajotres/Ionic2FirebaseOAuthExample.git
 2. cd Ionic2FirebaseOAuthExample
 3. ionic platform add android
 4. cordova plugin add cordova-plugin-whitelist
